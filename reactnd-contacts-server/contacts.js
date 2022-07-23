@@ -6,22 +6,22 @@ const db = {}
 const defaultData = {
   contacts: [
     {
-      id: '242dfef8-529a-11eb-ae93-0242ac130002',
+      id:"2", 
       name: 'Ryan Florence',
       email: 'ryan@reacttraining.com',
-      avatarURL: config.origin + '/ryan.jpg'
+      avatarURL: 'public/ryan.jpg'
     },
     {
-      id: '299992c6-529a-11eb-ae93-0242ac130002',
+      id:"1",
       name: 'Michael Jackson',
       email: 'michael@reacttraining.com',
-      avatarURL: config.origin + '/michael.jpg'
+      avatarURL: 'public/michael.jpg'
     },
     {
-      id: '307f0b0c-529a-11eb-ae93-0242ac130002',
+      id:"3",
       name: 'Tyler McGinnis',
       email: 'tyler@reacttraining.com',
-      avatarURL: config.origin + '/tyler.jpg'
+      avatarURL: 'public/tyler.jpg'
     }
   ]
 }
