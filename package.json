@@ -4,9 +4,10 @@
         "backend:install": "cd reactnd-contacts-server && npm install",
         "frontend:build": "cd reactnd-contacts-complete && npm run build",
         "backend:build": "cd reactnd-contacts-server && npm run build",
+        "frontend:test": "cd reactnd-contacts-complete && npm run test",
+        "backend:test": "cd reactnd-contacts-server && npm run test",
         "frontend:deploy": "cd reactnd-contacts-complete && npm run deploy",
         "backend:deploy": "cd reactnd-contacts-server && npm run deploy"
-
     
     }
 }
