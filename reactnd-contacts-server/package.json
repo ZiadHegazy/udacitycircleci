@@ -20,6 +20,6 @@
     "build": "yarn clean && cp -rf client/ www/client && cp -rf node_modules www/node_modules && cp -rf public/ www/public && cp config.js contacts.js server.js package.json www",
     "zip": "yarn build && cd www && zip -r -D ../app.zip *",
     "test": "echo \"Error: no test specified\"" ,
-    "deploy": "eb deploy"
+    "deploy": "bash eb deploy"
   }
 }
