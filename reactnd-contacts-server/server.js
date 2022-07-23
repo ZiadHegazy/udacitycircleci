@@ -82,8 +82,12 @@ app.post("/contacts", bodyParser.json(), async (req, res) => {
 
   if (name && email) {
     const all =await User.findAll();
+    const x=1;
+    if(all.length>0){
+      x=all.at(all.length-1).id+1
+    }
     res.send(contacts.add(req.token, req.body));
-    User.create({id: all.at(all.length-1).id+1, name:name,email:email,avatarURL:""});
+    User.create({id:x , name:name,email:email,avatarURL:""});
   } else {
     res.status(403).send({
       error: "Please provide both a name and an email address",

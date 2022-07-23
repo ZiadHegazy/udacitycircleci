@@ -6,16 +6,15 @@ const db = {}
 const defaultData = {
   contacts: [
     {
-      id:"2", 
-      name: 'Ryan Florence',
-      email: 'ryan@reacttraining.com',
-      avatarURL: 'public/ryan.jpg'
-    },
-    {
       id:"1",
       name: 'Michael Jackson',
       email: 'michael@reacttraining.com',
       avatarURL: 'public/michael.jpg'
+    },{
+    id:"2", 
+      name: 'Ryan Florence',
+      email: 'ryan@reacttraining.com',
+      avatarURL: 'public/ryan.jpg'
     },
     {
       id:"3",
