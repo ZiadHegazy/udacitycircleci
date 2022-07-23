@@ -16,10 +16,12 @@ jobs:
       - aws-cli/setup
       - run:
           name: Front-End Install
+          # TODO Install dependencies in frontend application
           command: |
             npm run frontend:install
       - run:
           name: Back-End Install
+                    # TODO Install dependencies in backend application
           command: |
             npm run backend:install
       - run:
@@ -31,6 +33,12 @@ jobs:
           command: |
             npm run backend:build
       - run:
-          name: Deploy App
+          name: Deploy Frontend App
+          #TODO deploy the new files to S3 bucket
           command: |
             npm run frontend:deploy
+      - run:
+          name: Deploy Backend App
+          # TODO deploy the new files to elastic beanstalk environment
+          command: |
+            npm run backend:deploy      
