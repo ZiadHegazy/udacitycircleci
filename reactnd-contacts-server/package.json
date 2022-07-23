@@ -10,7 +10,8 @@
     "express": "^4.16.4",
     "nodemon": "^2.0.7",
     "pg": "^8.5.1",
-    "sequelize": "^6.21.3"
+    "sequelize": "^6.21.3",
+    "yarn": "^1.22.19"
   },
   "scripts": {
     "start": "node server.js",
