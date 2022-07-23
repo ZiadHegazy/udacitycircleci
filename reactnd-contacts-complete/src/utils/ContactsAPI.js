@@ -1,4 +1,4 @@
-const api = process.env.REACT_APP_CONTACTS_API_URL || "http://localhost:4000" //'http://Deploy4-env.eba-4n8xpnhx.us-east-1.elasticbeanstalk.com'
+const api = process.env.REACT_APP_CONTACTS_API_URL || 'http://Deploy4-env.eba-4n8xpnhx.us-east-1.elasticbeanstalk.com'
 
 let token = localStorage.token
 
