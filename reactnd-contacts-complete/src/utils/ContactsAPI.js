@@ -1,4 +1,4 @@
-const api = process.env.REACT_APP_CONTACTS_API_URL || "http://localhost:4000" //'http://Deploy3-env.eba-4n8xpnhx.us-east-1.elasticbeanstalk.com'
+const api = process.env.REACT_APP_CONTACTS_API_URL || 'http://Deploy4-env.eba-4n8xpnhx.us-east-1.elasticbeanstalk.com'
 
 let token = localStorage.token
 
@@ -16,7 +16,6 @@ export const getAll = () =>
     .then(data => data)
 
 export const remove = (contact) =>{
-  alert("del"+" "+contact.id)
   fetch(`${api}/contacts/${contact.id}`, { method: 'DELETE', headers })
     .then(res => res.json())
     .then(data => data.contact)

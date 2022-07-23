@@ -1,14 +1,16 @@
 {
-  "engines" : { 
-    "node" : ">=16.0.0"
+  "engines": {
+    "node": ">=16.0.0"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
     "clone": "^2.1.2",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
     "express": "^4.16.4",
     "nodemon": "^2.0.7",
-    "pg": "^8.5.1"
+    "pg": "^8.5.1",
+    "sequelize": "^6.21.3"
   },
   "scripts": {
     "start": "node server.js",

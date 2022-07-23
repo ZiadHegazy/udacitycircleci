@@ -5,14 +5,17 @@ const cors = require("cors");
 const config = require("./config");
 const path = require("path");
 const contacts = require("./contacts");
-
+const dotenv=require("dotenv");
+dotenv.config()
 const app = express();
+//  "postgres://"+process.env.postgres_username+":"+process.env.postgres_password+"@"+process.env.link+":"+process.env.port+"/"+process.env.dbname
 
 app.use(express.static("public"));
 app.use(cors());
-
 const sequelize = new Sequelize(
-  'postgres://postgres:ZAheg1234@database-1.czklow2vfsu0.us-east-1.rds.amazonaws.com:5432/postgres'
+  "postgres://"+process.env.postgres_username+":"+process.env.postgres_password+"@"+process.env.link+":"+process.env.port+"/"+process.env.dbname
+
+  //'postgres://postgres:ZAheg1234@database-1.czklow2vfsu0.us-east-1.rds.amazonaws.com:5432/postgres'
 );
 
 class User extends Model {}
