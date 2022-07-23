@@ -82,7 +82,7 @@ app.post("/contacts", bodyParser.json(), async (req, res) => {
 
   if (name && email) {
     const all =await User.findAll();
-    const x=1;
+    let x=1;
     if(all.length>0){
       x=all.at(all.length-1).id+1
     }
