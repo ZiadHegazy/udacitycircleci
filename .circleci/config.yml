@@ -6,10 +6,6 @@ orbs:
   aws-cli: circleci/aws-cli@1.3.1
 jobs:
   build:
-    filters:
-      branches:
-        only:
-          -main 
     docker:
       - image: "cimg/base:stable"  
     steps:
@@ -63,3 +59,10 @@ jobs:
       #       apt add --upgrade python python-dev py-pip build-base jq zip
       #       pip install --upgrade awsebcli
       #       npm run backend:deploy      
+workflows:
+  jobs:
+    build:
+      filters:
+        branches:
+          only:
+            -main
