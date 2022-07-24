@@ -62,7 +62,7 @@ jobs:
 workflows:
   app:
     jobs:
-      -build:
+      -build
         filters:
           branches:
             only:
