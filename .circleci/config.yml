@@ -60,9 +60,10 @@ jobs:
       #       pip install --upgrade awsebcli
       #       npm run backend:deploy      
 workflows:
-  jobs:
-    build:
-      filters:
-        branches:
-          only:
-            -main
+  app:
+    jobs:
+      build:
+        filters:
+          branches:
+            only:
+              -main
