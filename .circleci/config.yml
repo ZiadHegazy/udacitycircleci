@@ -6,9 +6,10 @@ orbs:
   aws-cli: circleci/aws-cli@1.3.1
 jobs:
   build:
-    branches:
-    only:
-        -main 
+    parameters:
+      branches:
+        only:
+          -main 
     docker:
       - image: "cimg/base:stable"  
     steps:
