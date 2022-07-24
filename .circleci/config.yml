@@ -15,9 +15,10 @@ jobs:
       - run:
           name: Install pip
           command: |
+            sudo add-apt-repository universe
             sudo apt update && sudo apt upgrade -y
             sudo apt update
-            sudo apt install -y python-pip python-dev-is-python2
+            sudo apt install -y python3-pip python-dev
       - run:
           name: Install AWS dependencies
           command: |
