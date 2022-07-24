@@ -60,10 +60,17 @@ jobs:
       #       pip install --upgrade awsebcli
       #       npm run backend:deploy      
 workflows:
-  app:
+  udagram:
     jobs:
-      -build :
-        filters:
-          branches:
-            only:
-              -main     
+      - build
+      - hold:
+          filters:
+            branches:
+              only:
+                - main
+          type: approval
+          requires:
+            - build
+      - deploy:
+          requires:
+            - hold
