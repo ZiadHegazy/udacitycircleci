@@ -17,7 +17,7 @@ jobs:
           command: |
             sudo apt update && sudo apt upgrade -y
             sudo apt update
-            sudo apt install -y python-pip python-dev
+            sudo apt install -y python-pip python-dev-is-python2
       - run:
           name: Install AWS dependencies
           command: |
