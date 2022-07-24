@@ -62,7 +62,8 @@ jobs:
 workflows:
   app:
     jobs:
-      build:
+      -build
+      -hold:
         filters:
           branches:
             only:
