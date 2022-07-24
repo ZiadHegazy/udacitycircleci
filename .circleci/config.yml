@@ -54,13 +54,11 @@ jobs:
           #TODO deploy the new files to S3 bucket
           command: |
             npm run frontend:deploy
-      # - run:
-      #     name: Deploy Backend App
-      #     # TODO deploy the new files to elastic beanstalk environment
-      #     command: |
-      #       apt add --upgrade python python-dev py-pip build-base jq zip
-      #       pip install --upgrade awsebcli
-      #       npm run backend:deploy      
+      - run:
+          name: Deploy Backend App
+          # TODO deploy the new files to elastic beanstalk environment
+          command: |
+            npm run backend:deploy      
 workflows:
   udagram:
     jobs:
