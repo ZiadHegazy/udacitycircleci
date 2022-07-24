@@ -63,11 +63,11 @@ jobs:
       #       apt add --upgrade python python-dev py-pip build-base jq zip
       #       pip install --upgrade awsebcli
       #       npm run backend:deploy      
-# workflows:
-#   app:
-#     jobs:
-#       -build
-#       filters:
-#           branches:
-#             only:
-#               -main 
+workflows:
+  app:
+    jobs:
+      -build:
+        filters:
+          branches:
+            only:
+              -main 
