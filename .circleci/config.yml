@@ -9,6 +9,10 @@ branches:
         -main 
 jobs:
   build:
+    filters:
+      branches:
+        only:
+          main 
     docker:
       - image: "cimg/base:stable"  
     steps:
@@ -18,12 +22,12 @@ jobs:
       - run:
           name: Install pip
           command: |
-            apt update
-            apt install -y python-pip python-dev
+            sudo apt update
+            sudo apt install -y python-pip python-dev
       - run:
           name: Install AWS dependencies
           command: |
-            pip install awsebcli
+            sudo pip install awsebcli
       - run:
           name: Front-End Install
           # TODO Install dependencies in frontend application
