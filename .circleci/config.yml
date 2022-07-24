@@ -15,6 +15,7 @@ jobs:
       - run:
           name: Install pip
           command: |
+            sudo apt update && sudo apt upgrade -y
             sudo apt update
             sudo apt install -y python-pip python-dev
       - run:
@@ -71,6 +72,4 @@ workflows:
           type: approval
           requires:
             - build
-      # - deploy:
-      #     requires:
-      #       - hold
+     
