@@ -62,12 +62,8 @@ jobs:
 workflows:
   app:
     jobs:
-      -build
-      -hold:
+      -build:
         filters:
           branches:
             only:
-              -main
-        type: approval
-          requires:
-            - build      
+              -main 
